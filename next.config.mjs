@@ -3,13 +3,12 @@ import { withSentryConfig } from "@sentry/nextjs";
 const nextConfig = {};
 
 export default withSentryConfig(
-  withSentryConfig
-  {
+  withSentryConfig({
     // For all available options, see:
     // https://github.com/getsentry/sentry-webpack-plugin#options
 
     org: "portfolio-z6",
-    project: "javascript-nextjs",
+    project: "portfolio-z6",
 
     // Only print logs for uploading source maps in CI
     silent: !process.env.CI,
@@ -37,5 +36,5 @@ export default withSentryConfig(
     // https://docs.sentry.io/product/crons/
     // https://vercel.com/docs/cron-jobs
     automaticVercelMonitors: true,
-  }
+  })
 );
